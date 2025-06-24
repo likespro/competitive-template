@@ -51,6 +51,9 @@ Just copy & paste content of "likespro.eth - UNIVERSAL/likespro.eth - UNIVERSAL.
 
 ## Template content
 *Variables names in brackets `()` can be replaced to any other names, for example: `vi a; sort(all(a))` - here `n` in `all(n)` was replaced to the name of existing `vector<int>`*
+### Pragmas
+* **GCC**: set `Ofast` optimization mode
+* **GCC**: enable support for vectorization - `sse`, `sse2`, `sse3`, `ssse3`, `sse4`, `avx`, `avx2`
 ### Includes
 * `iostream`
 * `vector`
@@ -73,6 +76,8 @@ Just copy & paste content of "likespro.eth - UNIVERSAL/likespro.eth - UNIVERSAL.
 ### Common Definitions
 * `int` = `long long`
 * `uint` = `unsigned int`
+* `int32` = `__int32`
+* `uint32` = `unsigned int32`
 * `sz` = `size()`
 * `pb` = `push_back`
 * `mp` = `make_pair`
@@ -140,6 +145,8 @@ Just copy & paste content of "likespro.eth - UNIVERSAL/likespro.eth - UNIVERSAL.
 * `mivi` = `map<int, vi>`
 * `qi` = `queue<int>`
 * `vqi` = `vector<qi>`
+* `sti` = `stack<int>`
+* `stc` = `stack<char>`
 ### Misc Abbreviates
 * `via` = `vi a`
 * `vib` = `vi b`
@@ -151,8 +158,9 @@ Just copy & paste content of "likespro.eth - UNIVERSAL/likespro.eth - UNIVERSAL.
 * `retyes` - prints "YES" and returns from function where it was called
 * `retno` - prints "NO" and returns from function where it was called
 ### Functions
-* `xin()` - reads new `long long` number from `stdin` using `cin` and returns this number
-* ~~`fileio(filename, [input_file_suffix], [output_file_suffix])` - binds `<filename><input_file_suffix>` to `stdin` and `<filename><input_file_suffix>` to `stdout`. Default value for `input_file_suffix` is `.in`, for `output_file_suffix` - `.out`.~~ Temporary disabled because `Microsoft Visual Studio 2022` does not support it
+* `xin()` - reads new `int` number from `stdin` using `cin` and returns this number
+* `xin32()` - reads new `int32` number from `stdin` using `cin` and returns this number
+* `fileio(filename, [input_file_suffix], [output_file_suffix])` - binds `<filename><input_file_suffix>` to `stdin` and `<filename><input_file_suffix>` to `stdout`. Default value for `input_file_suffix` is `.in`, for `output_file_suffix` - `.out`
 * `tros(begin_iterator, end_iterator)` - sort array in order from the biggest to the lowest
 ### Operators
 * `>>vector` - `istream` for `vector`, reads to all elements. Example of usage: `cin>>vector;`

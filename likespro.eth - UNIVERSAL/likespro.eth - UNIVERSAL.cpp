@@ -32,6 +32,15 @@
  * SOFTWARE.
 */
 
+//	<========== CMPLRSTNGS ==========>
+
+#define _CRT_SECURE_NO_WARNINGS
+
+//	<========== PRAGMASGCC ==========>
+
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,avx,avx2")
+
 //	<========== INCLUDINGS ==========>
 
 #include <iostream>
@@ -60,6 +69,8 @@ using namespace std;
 
 #define int long long
 #define uint unsigned int
+#define int32 __int32
+#define uint32 unsigned int32
 #define sz size()
 #define pb push_back
 #define mp make_pair
@@ -140,6 +151,8 @@ using misi = map<int, si>;
 using mivi = map<int, vi>;
 using qi = /* not BenQi */ queue<int>;
 using vqi = vector<qi>;
+using sti = stack<int>;
+using stc = stack<char>;
 
 //  <========== ABBREVIATS ==========>
 
@@ -157,14 +170,18 @@ using vqi = vector<qi>;
 
 //  <========== SERVICEFXS ==========>
 
-int xin() {
+inline int xin() {
 	int n; cin >> n;
 	return n;
 }
-//inline void fileio(string s, string inputSuffix = ".in", string outputSuffix = ".out") {
-//	freopen((s + inputSuffix).c_str(), "r", stdin);
-//	freopen((s + outputSuffix).c_str(), "w", stdout);
-//}
+inline int32 xin32() {
+	int32 n; cin >> n;
+	return n;
+}
+inline void fileio(string s, string inputSuffix = ".in", string outputSuffix = ".out") {
+	freopen((s + inputSuffix).c_str(), "r", stdin);
+	freopen((s + outputSuffix).c_str(), "w", stdout);
+}
 template<class _T1> void tros(_T1 start, _T1 end) {
 	//TODO SPEED UP THIS (COMPARATOR)
 	sort(start, end);
